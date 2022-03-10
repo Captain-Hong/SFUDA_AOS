@@ -1,1 +1,1 @@
-# SFUDA_AMO
+This code is builded for the paper: Source-free unsupervised domain adaptation for cross-modality abdominal multi-organ segmentation (https://arxiv.org/abs/2111.12221). If this code is helpful to you, please cite the above paper. Thanks!
