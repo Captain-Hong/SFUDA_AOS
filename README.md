@@ -1,1 +1,1 @@
-This code is builded for the paper: Source-free unsupervised domain adaptation for cross-modality abdominal multi-organ segmentation (https://arxiv.org/abs/2111.12221). If this code is helpful to you, please cite the above paper. Thanks!
+This code is builded for the paper: Source-free unsupervised domain adaptation for cross-modality abdominal multi-organ segmentation (https://doi.org/10.1016/j.knosys.2022.109155). If this code is helpful to you, please cite the above paper. Thanks!
