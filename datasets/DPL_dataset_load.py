@@ -32,7 +32,7 @@ def make_dataset(root,filelist):
     mask_path = os.path.join(root, 'labels')
     data_list = [l.strip('\n') for l in open(os.path.join(root, filelist)).readlines()]
     for it in data_list:
-        item = (os.path.join(img_path, it), os.path.join(mask_path, it))
+        item = (os.path.join(img_path, it), os.path.join(mask_path, it), it)
 #        item = os.path.join(img_path, it)
         items.append(item)
     return items
@@ -45,8 +45,8 @@ class data_set(data.Dataset):
             raise RuntimeError('Found 0 images, please check the data set')
 
     def __getitem__(self, index):
-        img_path = self.imgs[index]
-        img_path, mask_path = self.imgs[index]
+
+        img_path, mask_path, image_name = self.imgs[index]
         img = np.load(img_path)
         
         
@@ -63,7 +63,7 @@ class data_set(data.Dataset):
         
         img = torch.from_numpy(np.array(img))
         mask=torch.from_numpy(np.array(mask, dtype=np.float32))
-        return img,mask
+        return img,mask,image_name
 
     def __len__(self):
         return len(self.imgs)

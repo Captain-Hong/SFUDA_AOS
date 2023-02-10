@@ -28,8 +28,8 @@ num_classes = 5
 def make_dataset(root,filelist):
 
     items = []
-    img_path = os.path.join(root, 'imgs')
-    mask_path = os.path.join(root, 'labels')
+    img_path = os.path.join(root, 'imgs1')
+    mask_path = os.path.join(root, 'labels1')
     data_list = [l.strip('\n') for l in open(os.path.join(root, filelist)).readlines()]
     for it in data_list:
         item = (os.path.join(img_path, it), os.path.join(mask_path, it))
